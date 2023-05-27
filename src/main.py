@@ -2,7 +2,7 @@ from math import ceil, log2
 
 
 def print_empty_line():
-    print() 
+    print()
 
 
 def greet_user():
@@ -46,7 +46,8 @@ def input_maximum_number(minimum_number):
             continue
 
         if minimum_number >= value:
-            print("Invalid Input: Your maximum number have to be greater than your minimum number!")
+            print(
+                "Invalid Input: Your maximum number have to be greater than your minimum number!")
             continue
 
         print_empty_line()
@@ -56,7 +57,8 @@ def input_maximum_number(minimum_number):
 
 
 def check_guess(guess, number_of_guesses):
-    print(f"Guess {number_of_guesses}: Is {guess} less than, more than, or equal to your number? ")
+    print(
+        f"Guess {number_of_guesses}: Is {guess} less than, more than, or equal to your number? ")
 
     while True:
         response = input("Response: ").lower()
@@ -81,7 +83,8 @@ def play_one_round():
     min = input_minimum_number()
     max = input_maximum_number(min)
 
-    print(f"I'll guess your number in {ceil(log2(max - min + 1)) + 1} steps or less.")
+    print(
+        f"I'll guess your number in {ceil(log2(max - min + 1)) + 1} steps or less.")
     print("Let's start...")
     print_empty_line()
 
