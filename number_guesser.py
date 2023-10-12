@@ -47,7 +47,8 @@ def input_maximum_number(minimum_number):
 
         if minimum_number >= value:
             print(
-                "Invalid Input: Your maximum number have to be greater than your minimum number!")
+                "Invalid Input: Your maximum number have to be greater than your minimum number!"
+            )
             continue
 
         print_empty_line()
@@ -58,16 +59,17 @@ def input_maximum_number(minimum_number):
 
 def check_guess(guess, number_of_guesses):
     print(
-        f"Guess {number_of_guesses}: Is {guess} less than, more than, or equal to your number? ")
+        f"Guess {number_of_guesses}: Is {guess} less than, more than, or equal to your number? "
+    )
 
     while True:
         response = input("Response: ").lower()
 
-        if response in ['m', 'more']:
+        if response in ["m", "more"]:
             response = 1
-        elif response in ['l', 'less']:
+        elif response in ["l", "less"]:
             response = -1
-        elif response in ['e', 'equal']:
+        elif response in ["e", "equal"]:
             response = 0
         else:
             print("Invalid Input: Please enter '(m)ore', '(l)ess', or '(e)qual'!")
@@ -83,8 +85,7 @@ def play_one_round():
     min = input_minimum_number()
     max = input_maximum_number(min)
 
-    print(
-        f"I'll guess your number in {ceil(log2(max - min + 1)) + 1} steps or less.")
+    print(f"I'll guess your number in {ceil(log2(max - min + 1)) + 1} steps or less.")
     print("Let's start...")
     print_empty_line()
 
@@ -117,9 +118,9 @@ def user_wants_to_play_again():
     while True:
         response = input("Reponse: ").lower()
 
-        if response in ['y', 'yes']:
+        if response in ["y", "yes"]:
             response = True
-        elif response in ['n', 'no']:
+        elif response in ["n", "no"]:
             response = False
         else:
             print("Invalid Input: Please enter '(y)es' or '(n)o'!")
@@ -149,5 +150,5 @@ def main():
     farewell_user()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
